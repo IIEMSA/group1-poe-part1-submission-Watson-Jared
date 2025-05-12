@@ -41,8 +41,8 @@ public class LoginTest {
     public void testReturnLoginStatusLoginSuccessful() {
         account.userName = "ky1_1";
         account.password =  "CH&&sec@ke99!";         
-        Scanner input =  new Scanner("ky1_1\nCH&&sec@ke99!");
-        String expected = "Welcome <user first name>, <user last name> it is great to see you again.";
+        Scanner input =  new Scanner("ky1_1\nCH&&sec@ke99!");       
+        String expected =  "Welcome <user first name>, <user last name> it is great to see you again.\n";
         String result = login.returnLoginStatus(account, input);
         
         assertEquals(expected, result);   
@@ -53,7 +53,7 @@ public class LoginTest {
         account.userName = "ky1_1";
         account.password =  "CH&&sec@ke99!";         
         Scanner input =  new Scanner("kyle!!!!\npassword");
-        String expected = "Username or password incorrect, please try again.";
+        String expected = "Username or password incorrect, please try again.\n";
         String result = login.returnLoginStatus(account, input);
         
         assertEquals(expected, result);   
