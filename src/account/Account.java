@@ -98,8 +98,10 @@ public class Account {
         // Create an Account object and a Scanner for input
         Account account1 = new Account();   
         Scanner input = new Scanner(System.in);
+        
+       
        // Repeat registration until successful
-       while(true){
+       /*while(true){
         String msg = account1.registerUser(input);
         System.out.println(msg);
          if (msg.contains("==== Registration Complete ====")) {
@@ -111,15 +113,17 @@ public class Account {
         Login login = new Login();
         String loginmsg = login.returnLoginStatus(account1, input);
         System.out.println(loginmsg); 
-        if(loginmsg.contains("Welcome <user first name>, <user last name> it is great to see you again.\n")){
-        break;
+        if(login.loginUser(account1)){*/
+             Message message = new Message();
+             message.menu();
+        /*break;
         }
-       }
+       }  
        
+       if(loggedIn){
+          
+       }*/
         
-       
-        
-            
     }
     
 }
